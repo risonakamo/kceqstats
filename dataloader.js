@@ -4,6 +4,7 @@ class _dataLoader
     {
         this.dataready=dataready;
         this.loadCount=0;
+        this.maxeq=630;
 
         this.loadjson("player-equip.json","playereq");
         this.loadjson("api-equip.json","apieq");
@@ -45,6 +46,7 @@ class _dataLoader
     {
         this.ideq={};
         this.typeeq={};
+        this.counteq={equips:0};
 
         var id;
         var idname;
@@ -52,6 +54,7 @@ class _dataLoader
 
         for (var x in this.playereq)
         {
+            this.counteq.equips++;
             id=this.playereq[x].api_slotitem_id;
             idname=id;
             type=this.apieq[id].api_type[3];
@@ -86,5 +89,7 @@ class _dataLoader
                 this.typeeq[type]=1;
             }
         }
+
+        this.counteq.free=this.maxeq-this.counteq.equips;
     }
 }
