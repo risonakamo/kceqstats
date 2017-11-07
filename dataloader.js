@@ -36,7 +36,55 @@ class _dataLoader
 
         if (this.loadCount>=2)
         {
+            this.dataTransform();
             this.dataready();
+        }
+    }
+
+    dataTransform()
+    {
+        this.ideq={};
+        this.typeeq={};
+
+        var id;
+        var idname;
+        var type;
+
+        for (var x in this.playereq)
+        {
+            id=this.playereq[x].api_slotitem_id;
+            idname=id;
+            type=this.apieq[id].api_type[3];
+
+            if (!this.playereq[x].api_locked)
+            {
+                idname+="u";
+            }
+
+            if (this.ideq[idname])
+            {
+                this.ideq[idname].count++;
+            }
+
+            else
+            {
+                this.ideq[idname]={
+                    name:this.apieq[id].api_name,
+                    count:1,
+                    type:type,
+                    locked:this.playereq[x].api_locked
+                };
+            }
+
+            if (this.typeeq[type])
+            {
+                this.typeeq[type]++;
+            }
+
+            else
+            {
+                this.typeeq[type]=1;
+            }
         }
     }
 }

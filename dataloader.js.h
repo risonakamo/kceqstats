@@ -6,15 +6,25 @@ class _dataLoader
     //constructor takes for callback when all data is loaded
     _dataLoader(function dataready());
 
-private:
+    //async loaded data
+    object playereq; //loaded player equipment data
+    object apieq; //loaded all api equipment data
+
+    //transformed data
+    /*transformed data, externally set
+    {int ids:string name,int count,int type,int locked}*/
+    object ideq;
+    object typeeq; //count of types
+
+  private:
     int loadCount;
 
-    //async loaded data
-    object playereq;
-    object apieq;
+    //function called when data load completes
+    function dataready;
 
     //load data to object
     async-void loadjson(string filename,string label);
     //wait for certain number of completed loads from loadjson
     void waitLoad(object data,string label);
+    void dataTransform();
 }

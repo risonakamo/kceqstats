@@ -4,6 +4,11 @@ var dataloader;
 
 function premain()
 {
+    dataloader=new _dataLoader(main);
+}
+
+function main()
+{
     // var pc=new Chart(document.querySelector(".pie"),{
     //     type:"pie",
     //     data:{
@@ -13,12 +18,4 @@ function premain()
     //         labels:["bob","jull","nop"]
     //     }
     // });
-
-    dataloader=new _dataLoader(main);
-}
-
-function main()
-{
-    console.log(dataloader.playereq);
-    console.log(dataloader.apieq);
 }
