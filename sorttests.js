@@ -35,7 +35,7 @@ function sortName()
 
         else
         {
-            res[id]={count:1,name:_apiAllEquip[id].api_name};
+            res[id]={count:1,name:_apiAllEquip[id].api_name,type:_apiAllEquip[id].api_type[3]};
         }
     }
 

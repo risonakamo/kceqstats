@@ -3,10 +3,63 @@
 body
 {
     margin: 0;
+    font-family: roboto;
 }
 
 .pie-contain
 {
     width: 600px;
     height: 600px;
+}
+
+/*-- eq list --*/
+.eq-list
+{
+    width: 300px;
+    font-size: 0;
+}
+
+.eq-list .eq-item
+{
+    width: 100%;
+    height: 35px;
+}
+
+.eq-item > div
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 35px;
+    height: 100%;
+}
+
+.eq-item .icon,.eq-item .amount
+{
+    width: 35px;
+}
+
+.eq-item .icon
+{
+    background-color: white;
+}
+
+.eq-item .amount,.eq-item .name
+{
+    font-size: 15px;
+    color: white;
+}
+
+.eq-item .amount
+{
+    background-color: #20659b;
+}
+
+.eq-item .name
+{
+    width: 230px;
+    background-color: #2b71a4;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 10px;
 }
