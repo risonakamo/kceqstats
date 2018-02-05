@@ -4,6 +4,9 @@ class _eqList
     {
         this.eqList=document.querySelector(".eq-list");
 
+        //convert equipment type int to class name of type this.classes[type-1]
+        this.classes=["dd-gun","ca-gun","bb-gun","sec-gun","torp","fighter","dive","tbomber","recon","seaplane","radar","sanshiki","ap","repair","antiair","green","depth","sonar","boiler","boat","gyro","subscout","torparmour","light","barrel","akashi","starshell","command","airwrench","aacontroller","wug","lookout","taitei","onigiri","oilbarrel","tank","landbomber","interceptor","jet1","jet2","airparts","subsonar","fighterseaplane","landbomber2"];
+
         this.genItems(sortTypeAndName());
     }
 
@@ -14,7 +17,7 @@ class _eqList
         var firstItem;
         for (var x in data)
         {
-            section=`<div class="type-contain ${this.typeToClass(x)}">`;
+            section=`<div class="type-contain ${this.classes[x-1]}">`;
             firstItem=1;
 
             for (var y in data[x])
@@ -40,21 +43,5 @@ class _eqList
 
         //html from eqlist-gen
         return `<div class="eq-item"><div class="icon">${imgString}</div><div class="amount">${data.count}</div><div class="name">${data.name}</div></div>`;
-    }
-
-    //convert equipment type int to class name of type
-    typeToClass(type)
-    {
-        switch (type)
-        {
-            case "5":
-            return "torp";
-
-            case "1":
-            return "dd-gun";
-            break;
-        }
-
-        return "";
     }
 }
