@@ -79,3 +79,23 @@ body
 {
     background-color: #4185b2;
 }
+
+.type-contain.dd-gun .eq-item .amount
+{
+    background-color: #df4848;
+}
+
+.type-contain.dd-gun .eq-item .name
+{
+    background-color: #e25555;
+}
+
+.type-contain.dd-gun .eq-item:nth-of-type(2n) .amount
+{
+    background-color: #e45e5e;
+}
+
+.type-contain.dd-gun .eq-item:nth-of-type(2n) .name
+{
+    background-color: #e76a6a;
+}
