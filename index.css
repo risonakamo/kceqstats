@@ -2,6 +2,7 @@
 
 html,body
 {
+    position: relative;
     height: 100%;
 }
 
@@ -11,19 +12,37 @@ body
     font-family: roboto;
 }
 
+.pie-contain-contain
+{
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
 .pie-contain
 {
     display: inline-block;
     vertical-align: top;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
+}
+
+/*-- eq contain --*/
+.eq-contain
+{
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
 }
 
 /*-- eq list --*/
 .eq-list
 {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
-    vertical-align: top;
     height: 100%;
     overflow: auto;
     font-size: 0;
