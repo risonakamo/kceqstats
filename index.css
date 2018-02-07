@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html,body
+{
+    height: 100%;
+}
+
 body
 {
     margin: 0;
@@ -8,6 +13,8 @@ body
 
 .pie-contain
 {
+    display: inline-block;
+    vertical-align: top;
     width: 600px;
     height: 600px;
 }
@@ -15,13 +22,16 @@ body
 /*-- eq list --*/
 .eq-list
 {
-    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    overflow: auto;
     font-size: 0;
 }
 
 .eq-list .eq-item
 {
-    width: 100%;
+    width: 300px;
     height: 35px;
 }
 
