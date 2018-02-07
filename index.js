@@ -8,6 +8,12 @@ function main()
 {
     getEquipData(()=>{
         eqlist=new _eqList;
+
+        var piechart=new Chart(document.querySelector(".pie"),
+        {
+            type:"pie",
+            data:genTypeDataset()
+        });
     });
 }
 

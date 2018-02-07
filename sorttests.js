@@ -73,3 +73,18 @@ function sortTypeAndName()
 
     return res;
 }
+
+function genTypeDataset()
+{
+    var data=sortTypes();
+    var datasetdata=[];
+    var labels=[];
+
+    for (var x in data)
+    {
+        datasetdata.push(data[x]);
+        labels.push(eqlist.classes[x-1]);
+    }
+
+    return {datasets:[{data:datasetdata}],labels:labels};
+}
