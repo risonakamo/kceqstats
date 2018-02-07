@@ -14,17 +14,6 @@ function main()
             type:"pie",
             data:genTypeDataset()
         });
-
-        // var piechart=new Chart(document.querySelector(".pie"),
-        // {
-        //     type:"pie",
-        //     data:{
-        //         datasets:[{
-        //             data:[1,2,3],
-        //             backgroundColor:["#000","#000","#000"]
-        //         }]
-        //     }
-        // });
     });
 }
 

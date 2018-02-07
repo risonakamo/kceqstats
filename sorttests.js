@@ -88,5 +88,5 @@ function genTypeDataset()
         colours.push(eqlist.classColours[x-1]);
     }
 
-    return {datasets:[{data:datasetdata,backgroundColor:colours}],labels:labels};
+    return {datasets:[{data:datasetdata,backgroundColor:colours,borderColor:colours}],labels:labels};
 }
