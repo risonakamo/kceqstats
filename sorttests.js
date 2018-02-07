@@ -79,12 +79,14 @@ function genTypeDataset()
     var data=sortTypes();
     var datasetdata=[];
     var labels=[];
+    var colours=[];
 
     for (var x in data)
     {
         datasetdata.push(data[x]);
         labels.push(eqlist.classes[x-1]);
+        colours.push(eqlist.classColours[x-1]);
     }
 
-    return {datasets:[{data:datasetdata}],labels:labels};
+    return {datasets:[{data:datasetdata,backgroundColor:colours}],labels:labels};
 }
