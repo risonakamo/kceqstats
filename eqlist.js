@@ -17,7 +17,7 @@ class _eqList
         var firstItem;
         for (var x in data)
         {
-            section=`<div class="type-contain ${this.classes[x-1]}">`;
+            section=`<div class="type-contain t${x}">`;
             firstItem=1;
 
             for (var y in data[x])

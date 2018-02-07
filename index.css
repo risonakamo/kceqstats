@@ -69,14 +69,3 @@ body
 {
     background-color: rgba(255,255,255,.23);
 }
-
-/*-- eq item type colours --*/
-.type-contain.torp .eq-item
-{
-    background-color: #20659b;
-}
-
-.type-contain.dd-gun .eq-item
-{
-    background-color: #df4848;
-}
