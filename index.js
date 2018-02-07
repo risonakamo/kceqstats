@@ -12,7 +12,8 @@ function main()
         var piechart=new Chart(document.querySelector(".pie"),
         {
             type:"pie",
-            data:genTypeDataset()
+            data:genTypeDataset(),
+            options:{legend:{display:false}}
         });
     });
 }
